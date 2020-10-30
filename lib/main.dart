@@ -74,13 +74,23 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Spacer(),
               Text(
                 'Gas Mark:',
               ),
               Text(
                 '$_progress',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline1,
               ),
+              Text(
+                '${convert(_progress)[1]}°C',
+                style: Theme.of(context).textTheme.headline3,
+              ),
+              Text(
+                '${convert(_progress)[0]}°F',
+                style: Theme.of(context).textTheme.headline3,
+              ),
+              Spacer(),
               CupertinoSlider(
                 value: _progress.toDouble(),
                 min: 1.0,
@@ -94,14 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 },
               ),
-              Text(
-                '${convert(_progress)[0]}°F',
-                style: Theme.of(context).textTheme.headline5,
-              ),
-              Text(
-                '${convert(_progress)[1]}°C',
-                style: Theme.of(context).textTheme.headline5,
-              ),
+              Spacer(),
             ],
           ),
         ),
