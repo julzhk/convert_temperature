@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Spacer(),
               Text(
-                'Gas Mark:',
+                'Gas Mark',
               ),
               Text(
                 '$_progress',
